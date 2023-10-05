@@ -1,0 +1,6 @@
+#chartSet{
+    display: grid;
+    grid-template-columns: minmax(200px, 700px);
+    grid-template-rows: auto;
+    row-gap: 20px;
+}
