@@ -23,3 +23,6 @@
 #chartSet div:nth-child(5) {
     order: 5;
 }
+#chartSet div:nth-child(6) {
+    order: 6;
+}

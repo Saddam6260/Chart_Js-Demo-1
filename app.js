@@ -51,7 +51,7 @@ new Chart(secountChart, {
 
 // Third Chart Type Pie
 const thirdChart = document.getElementById("thirdChart");
-const piebgColor = ["#ffcad4", "#0d1321", "#7b2cbf", "#ffd500", "#aaa1c8"]
+const piebgColor = ["#ffcad4", "#0d1321", "#7b2cbf", "#ffd500", "#aaa1c8"];
 
 new Chart("thirdChart", {
   type: "pie",
@@ -74,7 +74,7 @@ new Chart("thirdChart", {
 
 // Four Chart Type Doughnut
 const fourChart = document.getElementById("fourChart");
-const doughnutbgColor = ["#c1121f", "#ffd60a", "#3a5a40", "#ffddd2", "#f72585"]
+const doughnutbgColor = ["#c1121f", "#ffd60a", "#3a5a40", "#ffddd2", "#f72585"];
 
 new Chart("fourChart", {
   type: "doughnut",
@@ -96,3 +96,58 @@ new Chart("fourChart", {
 });
 
 // Five Chart Type scatter
+const fiveChart = document.getElementById("fiveChart");
+const xyValue = [
+  { x: 50, y: 7 },
+  { x: 60, y: 8 },
+  { x: 70, y: 8 },
+  { x: 80, y: 9 },
+  { x: 90, y: 9 },
+  { x: 100, y: 9 },
+  { x: 110, y: 10 },
+  { x: 120, y: 11 },
+  { x: 130, y: 14 },
+  { x: 140, y: 14 },
+  { x: 150, y: 15 },
+];
+
+new Chart("fiveChart", {
+  type: "scatter",
+  data: {
+    datasets: [
+      {
+        pointRedius: 4,
+        pointBackgroundColor: "#a2d2ff",
+        data: xyValue,
+      },
+    ],
+  },
+});
+
+// Six Chart Type Line
+const yValue = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+const xValue = [7, 8, 12, 10, 9, 12, 13, 14, 10, 16, 17];
+
+const sixChart = document.getElementById("sixChart");
+
+new Chart("sixChart", {
+  type: "line",
+  data: {
+    labels: yValue,
+    datasets: [
+      {
+        fill: false,
+        lineTension: 0,
+        backgroundColor: "#ffd60a",
+        borderColor: "#8338ec",
+        data: xValue,
+      },
+    ],
+  },
+  options: {
+    legend: { display: false },
+    scales: {
+      yAxes: [{ ticks: { min: 6, max: 16 } }],
+    },
+  },
+});
