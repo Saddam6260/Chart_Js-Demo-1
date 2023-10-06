@@ -51,6 +51,7 @@ new Chart(secountChart, {
 
 // Third Chart Type Pie
 const thirdChart = document.getElementById("thirdChart");
+const piebgColor = ["#ffcad4", "#0d1321", "#7b2cbf", "#ffd500", "#aaa1c8"]
 
 new Chart("thirdChart", {
   type: "pie",
@@ -58,7 +59,7 @@ new Chart("thirdChart", {
     labels: country,
     datasets: [
       {
-        backgroundColor: bgColor,
+        backgroundColor: piebgColor,
         data: value,
       },
     ],
@@ -73,6 +74,7 @@ new Chart("thirdChart", {
 
 // Four Chart Type Doughnut
 const fourChart = document.getElementById("fourChart");
+const doughnutbgColor = ["#c1121f", "#ffd60a", "#3a5a40", "#ffddd2", "#f72585"]
 
 new Chart("fourChart", {
   type: "doughnut",
@@ -80,7 +82,7 @@ new Chart("fourChart", {
     labels: country,
     datasets: [
       {
-        backgroundColor: bgColor,
+        backgroundColor: doughnutbgColor,
         data: value,
       },
     ],
@@ -92,3 +94,5 @@ new Chart("fourChart", {
     },
   },
 });
+
+// Five Chart Type scatter
